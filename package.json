@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-fingerprint",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A fingerprinting plugin for Metalsmith",
   "keywords": [
     "metalsmith",
