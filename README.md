@@ -28,23 +28,27 @@ Metalsmith(__dirname)
 
 ## Example
 
-Let's say we want to convert `index.less` into CSS, then fingerprint the resulting CSS:
+Let's say you want to fingerprint `css/index.css`:
 
 ```js
-Metalsmith()
-    .use(less({ pattern: 'less/index.less' }))
-    .use(fingerprint({ pattern: 'css/index.css' }))
-    .use(template({ engine: 'handlebars' }))
-    .build()
+Metalsmith(__dirname)
+  .use(fingerprint({ pattern: 'css/index.css' }))
+  .use(template({ engine: 'handlebars' }))
+  .build()
 ```
 
-Fingerprint creates a `fingerprint` object on the Metalsmith metadata. This object is accessible in the template:
+The plugin does two things:
 
-```handlebars
+1. create a duplicate of `index.css` with a fingerprinted filename
+2. creates a `fingerprint` object on the Metalsmith metadata
+
+Now you can access the `fingerprint` object in your Handlebars template:
+
+```html
 <link href="{{ fingerprint['css/index.css'] }}" rel="stylesheet" type="text/css" />
 ```
 
-The rendered HTML will reference the fingerprinted file name:
+And the rendered HTML will reference the fingerprinted file name:
 
 ```html
 <link href="css/index-724af9dd72a48c18dd570790c2445fb4.css" rel="stylesheet" type="text/css" />

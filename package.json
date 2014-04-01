@@ -17,16 +17,17 @@
   "license": "MIT",
   "main": "./lib/",
   "scripts": {
-    "test": "./node_modules/.bin/jshint ./lib/ ./test/ && ./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/jshint ./lib/ ./test/ && ./node_modules/.bin/mocha --reporter spec -r should"
   },
   "dependencies": {
-
+    "multimatch": "^0.1.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "jshint": "^2.4.4",
     "metalsmith": "^0.5.0",
-    "mocha": "^1.17.1"
+    "mocha": "^1.17.1",
+    "should": "^3.2.0"
   },
   "jshintConfig": {
     "eqeqeq": true,
