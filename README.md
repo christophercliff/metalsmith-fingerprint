@@ -45,7 +45,7 @@ The plugin does two things:
 The `fingerprint` object is accessible from the Handlebars template:
 
 ```html
-<link href="{{ fingerprint['css/index.css'] }}" rel="stylesheet" type="text/css" />
+<link href="{{ fingerprint.[css/index.css] }}" rel="stylesheet" type="text/css" />
 ```
 
 And the template renders the fingerprinted filename:
