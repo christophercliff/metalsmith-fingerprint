@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/christophercliff/metalsmith-fingerprint.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-fingerprint)
 
-A [fingerprinting][fingerprinting] plugin for [Metalsmith][metalsmith].
+A [fingerprint][fingerprint] plugin for [Metalsmith][metalsmith].
 
 ## Installation
 
@@ -28,7 +28,7 @@ Metalsmith(__dirname)
 
 ## Example
 
-Let's say you want to fingerprint `css/index.css`:
+Say you want to fingerprint the file `css/index.css`:
 
 ```js
 Metalsmith(__dirname)
@@ -40,15 +40,15 @@ Metalsmith(__dirname)
 The plugin does two things:
 
 1. create a duplicate of `index.css` with a fingerprinted filename
-2. creates a `fingerprint` object on the Metalsmith metadata
+2. create a `fingerprint` object on the Metalsmith metadata
 
-Now you can access the `fingerprint` object in your Handlebars template:
+The `fingerprint` object is accessible from the Handlebars template:
 
 ```html
 <link href="{{ fingerprint['css/index.css'] }}" rel="stylesheet" type="text/css" />
 ```
 
-And the rendered HTML will reference the fingerprinted file name:
+And the template renders the fingerprinted filename:
 
 ```html
 <link href="css/index-724af9dd72a48c18dd570790c2445fb4.css" rel="stylesheet" type="text/css" />
@@ -64,6 +64,6 @@ $ npm test
 
 MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-fingerprint/blob/master/LICENSE.md) for details.
 
-[fingerprinting]: http://guides.rubyonrails.org/asset_pipeline.html#what-is-fingerprinting-and-why-should-i-care-questionmark
+[fingerprint]: http://guides.rubyonrails.org/asset_pipeline.html#what-is-fingerprinting-and-why-should-i-care-questionmark
 [metalsmith]: http://www.metalsmith.io/
 [multimatch]: https://github.com/sindresorhus/multimatch
