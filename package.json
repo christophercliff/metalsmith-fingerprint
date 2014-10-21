@@ -25,7 +25,7 @@
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "jshint": "^2.4.4",
-    "metalsmith": "^0.5.0",
+    "metalsmith": "^1.0.1",
     "mocha": "^1.17.1",
     "should": "^3.2.0"
   },
