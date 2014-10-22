@@ -17,32 +17,40 @@
   "license": "MIT",
   "main": "./lib/",
   "scripts": {
-    "test": "./node_modules/.bin/jshint ./lib/ ./test/ && ./node_modules/.bin/mocha --reporter spec -r should"
+    "jshint": "./node_modules/.bin/jshint ./lib/ ./test/",
+    "test": "npm run jshint && ./node_modules/.bin/mocha --reporter spec -r should"
   },
   "dependencies": {
-    "multimatch": "^0.1.0"
+    "multimatch": "^1.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "jshint": "^2.4.4",
+    "jshint": "^2.5.6",
     "metalsmith": "^1.0.1",
-    "mocha": "^1.17.1",
-    "should": "^3.2.0"
+    "mocha": "^2.0.0",
+    "should": "^4.1.0"
   },
   "jshintConfig": {
-    "eqeqeq": true,
-    "immed": true,
-    "latedef": "nofunc",
-    "quotmark": "single",
-    "trailing": true,
-    "unused": true,
     "asi": true,
     "boss": true,
+    "eqeqeq": true,
     "expr": true,
+    "immed": true,
+    "latedef": "nofunc",
     "laxbreak": true,
     "laxcomma": true,
+    "loopfunc": true,
+    "newcap": true,
+    "node": true,
+    "predef": [
+      "describe",
+      "it"
+    ],
+    "quotmark": "single",
     "scripturl": true,
     "sub": true,
-    "loopfunc": true
+    "trailing": true,
+    "undef": true,
+    "unused": true
   }
 }
