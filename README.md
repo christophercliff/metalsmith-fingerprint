@@ -26,6 +26,10 @@ Metalsmith(__dirname)
 
     A [pattern][multimatch] to filter source files. Required.
 
+- **`exclude`** `Boolean`
+
+    Whether or not to exclude original files. Defaults to `false`.
+
 ## Example
 
 Say you want to fingerprint the file `css/index.css`:
