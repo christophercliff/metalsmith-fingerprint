@@ -22,7 +22,7 @@ Metalsmith(__dirname)
 
 ### Options
 
-- **`match`** `String pattern|Array<String> pattern`
+- **`match`** `String|Array<String>`
 
     A [pattern][multimatch] to filter source files. Required.
 
@@ -62,7 +62,7 @@ $ npm test
 
 ## License
 
-MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-fingerprint/blob/master/LICENSE.md) for details.
+See [LICENSE](https://github.com/christophercliff/metalsmith-fingerprint/blob/master/LICENSE.md).
 
 [fingerprint]: http://guides.rubyonrails.org/asset_pipeline.html#what-is-fingerprinting-and-why-should-i-care-questionmark
 [metalsmith]: http://www.metalsmith.io/

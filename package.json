@@ -18,16 +18,16 @@
   "main": "./lib/",
   "scripts": {
     "style": "./node_modules/.bin/crispy ./lib/ ./test/",
-    "test": "npm run style && ./node_modules/.bin/mocha --reporter spec -r should"
+    "test": "npm run style && ./node_modules/.bin/mocha --reporter spec -r should --grep=''"
   },
   "dependencies": {
-    "multimatch": "^1.0.0"
+    "multimatch": "^2.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "crispy": "^2.0.0",
-    "metalsmith": "^1.0.1",
-    "mocha": "^2.0.0",
-    "should": "^4.1.0"
+    "crispy": "^3.1.2",
+    "metalsmith": "^1.1.1",
+    "mocha": "^2.1.0",
+    "should": "^4.6.1"
   }
 }
