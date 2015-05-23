@@ -22,9 +22,13 @@ Metalsmith(__dirname)
 
 ### Options
 
-- **`match`** `String|Array<String>`
+- **`pattern`** `String|Array<String>`
 
     A [pattern][multimatch] to filter source files. Required.
+
+- **`keep`** `Boolean`
+
+    Keep the original file. Default `false`.
 
 ## Example
 
@@ -39,7 +43,7 @@ Metalsmith(__dirname)
 
 The plugin does two things:
 
-1. create a duplicate of `index.css` with a fingerprinted filename
+1. create a copy of `index.css` with a fingerprinted filename
 2. create a `fingerprint` object on the Metalsmith metadata
 
 The `fingerprint` object is accessible from the Handlebars template:
