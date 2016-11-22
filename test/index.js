@@ -18,4 +18,14 @@ describe('metalsmith-fingerprint', function () {
             })
     })
 
+    it('should keep original file', function (done) {
+        (new Metalsmith('test/fixtures/keep'))
+            .use(fingerprint({ pattern: 'hello.txt', keep: true }))
+            .build(function (err) {
+                if (err) return done(err)
+                assertDir('test/fixtures/keep/expected', 'test/fixtures/keep/build')
+                return done(null)
+            })
+    })
+
 })
